@@ -7,10 +7,7 @@ import java.net.http.HttpResponse;
 
 public class ConsultaMoneda {
 
-    ConsultaMoneda(String base,String target, double amount){
-        realizaCambio(base,target,amount);
-    }
-    private Moneda realizaCambio(String monedaBase, String monedaObjetivo, double cantidad){
+    public Moneda realizaCambio(String monedaBase, String monedaObjetivo, double cantidad){
         String llave ="b1701122247ab8055158937a";
         var url = "https://v6.exchangerate-api.com/v6/"+llave+"/pair/"+monedaBase+"/"+monedaObjetivo+"/"+cantidad;
         URI direccion = URI.create(url);
@@ -20,7 +17,7 @@ public class ConsultaMoneda {
         try{
             HttpResponse<String> response = null;
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
+            //System.out.println(response.body());
             return new Gson().fromJson(response.body(), Moneda.class);
         }catch (Exception e){
             throw new RuntimeException("No pude realizar la conversión");
