@@ -1,3 +1,5 @@
+![Badge-Conversor](https://github.com/ManuelMohedano/ConversorDeMonedas/assets/98444312/c72b0844-1519-46fb-8192-133599c9c411)
+
 Proyecto de conversion de monedas propuesto por Alura
 Este proyecto realiza la conversion de mi moneda local (MXN [Pesos Mexicanos]) a
 ·Peso Argentino
